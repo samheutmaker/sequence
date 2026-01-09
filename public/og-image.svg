@@ -1,0 +1,96 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0d0d0d"/>
+
+  <!-- Grid pattern background -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Sequencer visualization -->
+  <g transform="translate(100, 180)">
+    <!-- Row 1 - Kick -->
+    <rect x="0" y="0" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="65" y="0" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="130" y="0" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="195" y="0" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="260" y="0" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="325" y="0" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="390" y="0" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="455" y="0" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="520" y="0" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="585" y="0" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="650" y="0" width="50" height="50" rx="6" fill="#f97316"/>
+    <rect x="715" y="0" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="780" y="0" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="845" y="0" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="910" y="0" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="975" y="0" width="50" height="50" rx="6" fill="#1e293b"/>
+
+    <!-- Row 2 - Snare -->
+    <rect x="0" y="60" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="65" y="60" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="130" y="60" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="195" y="60" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="260" y="60" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="325" y="60" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="390" y="60" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="455" y="60" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="520" y="60" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="585" y="60" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="650" y="60" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="715" y="60" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="780" y="60" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="845" y="60" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="910" y="60" width="50" height="50" rx="6" fill="#f97316"/>
+    <rect x="975" y="60" width="50" height="50" rx="6" fill="#1e293b"/>
+
+    <!-- Row 3 - Hi-Hat -->
+    <rect x="0" y="120" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="65" y="120" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="130" y="120" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="195" y="120" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="260" y="120" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="325" y="120" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="390" y="120" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="455" y="120" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="520" y="120" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="585" y="120" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="650" y="120" width="50" height="50" rx="6" fill="#f97316"/>
+    <rect x="715" y="120" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="780" y="120" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="845" y="120" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="910" y="120" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="975" y="120" width="50" height="50" rx="6" fill="#3b82f6"/>
+
+    <!-- Row 4 - Clap -->
+    <rect x="0" y="180" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="65" y="180" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="130" y="180" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="195" y="180" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="260" y="180" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="325" y="180" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="390" y="180" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="455" y="180" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="520" y="180" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="585" y="180" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="650" y="180" width="50" height="50" rx="6" fill="#f97316"/>
+    <rect x="715" y="180" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="780" y="180" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="845" y="180" width="50" height="50" rx="6" fill="#1e293b"/>
+    <rect x="910" y="180" width="50" height="50" rx="6" fill="#3b82f6"/>
+    <rect x="975" y="180" width="50" height="50" rx="6" fill="#1e293b"/>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="80" font-family="Inter, system-ui, sans-serif" font-size="48" font-weight="700" fill="white" text-anchor="middle">Sequence</text>
+  <text x="600" y="120" font-family="Inter, system-ui, sans-serif" font-size="20" fill="#6b7280" text-anchor="middle">Professional Drum Machine</text>
+
+  <!-- Playhead indicator -->
+  <rect x="750" y="360" width="4" height="240" fill="#f97316" rx="2"/>
+
+  <!-- Footer -->
+  <text x="600" y="590" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#4b5563" text-anchor="middle">sequence.fly.dev</text>
+</svg>
