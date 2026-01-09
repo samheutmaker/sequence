@@ -33,14 +33,16 @@ export function Sequencer() {
   });
 
   return (
-    <div className="flex flex-col gap-4 h-full">
-      {/* Visualizer */}
-      <Visualizer />
+    <div className="flex flex-col gap-2 sm:gap-4 h-full">
+      {/* Visualizer - smaller on mobile */}
+      <div className="hidden sm:block">
+        <Visualizer />
+      </div>
 
       {/* Kit and Pattern controls */}
-      <div className="flex flex-wrap items-center gap-6 p-4 bg-surface-900 rounded-lg border border-surface-700">
+      <div className="flex flex-wrap items-center gap-3 sm:gap-6 p-2 sm:p-4 bg-surface-900 rounded-lg border border-surface-700">
         <KitSelector />
-        <div className="w-px h-8 bg-surface-700" />
+        <div className="hidden sm:block w-px h-8 bg-surface-700" />
         <PatternManager />
       </div>
 
@@ -48,14 +50,14 @@ export function Sequencer() {
       <Transport />
 
       {/* Step markers */}
-      <div className="flex items-center gap-3 px-4 text-xs text-surface-500 font-mono">
-        <div className="w-16" />
-        <div className="w-[68px]" />
+      <div className="flex items-center gap-1 sm:gap-3 px-2 sm:px-4 text-xs text-surface-500 font-mono">
+        <div className="w-12 sm:w-16 flex-shrink-0" />
+        <div className="w-[52px] sm:w-[68px] flex-shrink-0" />
         <div className="flex gap-1 overflow-x-auto">
           {stepMarkers.map(({ index, beatNumber, isDownbeat }) => (
             <div
               key={index}
-              className={`w-10 sm:w-12 text-center flex-shrink-0 ${
+              className={`w-8 sm:w-12 text-center flex-shrink-0 ${
                 isDownbeat ? "text-surface-300 font-medium" : "text-surface-600"
               }`}
             >
@@ -66,7 +68,7 @@ export function Sequencer() {
       </div>
 
       {/* Track rows */}
-      <div className="flex flex-col gap-2 overflow-x-auto">
+      <div className="flex flex-col gap-1 sm:gap-2 overflow-x-auto">
         {tracks.map((track) => (
           <TrackRow key={track.id} track={track} currentStep={currentStep} />
         ))}

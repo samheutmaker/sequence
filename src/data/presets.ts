@@ -29,6 +29,32 @@ export interface BeatPreset {
 
 export const BEAT_PRESETS: BeatPreset[] = [
   {
+    id: "default-beat",
+    name: "Default Beat",
+    category: "Lo-Fi",
+    bpm: 98,
+    swing: 44,
+    description: "A chill lo-fi groove to get you started",
+    pattern: [
+      // Kick
+      [H, _, _, _, _, _, _, H, H, _, _, H, _, _, _, H],
+      // Snare
+      [_, _, _, _, H, _, _, _, _, H, _, _, H, _, _, _],
+      // Hi-Hat
+      [H, _, H, _, H, _, H, _, H, _, H, _, H, _, H, _],
+      // Clap
+      [_, _, _, _, L, _, _, _, _, _, _, _, _, _, _, _],
+      // Open Hat
+      [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _],
+      // Shaker
+      [_, _, _, _, L, _, _, _, _, _, _, _, L, _, L, _],
+      // Perc
+      [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, H],
+      // Crash
+      [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _],
+    ],
+  },
+  {
     id: "classic-trap",
     name: "Classic Trap",
     category: "Trap",

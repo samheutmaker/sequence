@@ -146,14 +146,14 @@ export function App() {
   return (
     <div className="h-screen bg-surface-950 flex flex-col">
       {/* Header */}
-      <header className="flex items-center justify-between px-6 py-3 bg-surface-900 border-b border-surface-700">
-        <h1 className="text-base font-semibold text-white tracking-tight">
+      <header className="flex items-center justify-between px-3 sm:px-6 py-2 sm:py-3 bg-surface-900 border-b border-surface-700">
+        <h1 className="text-sm sm:text-base font-semibold text-white tracking-tight">
           Sequence
         </h1>
 
-        <div className="flex items-center gap-4">
-          {/* Undo/Redo */}
-          <div className="flex gap-1">
+        <div className="flex items-center gap-2 sm:gap-4">
+          {/* Undo/Redo - hidden on mobile */}
+          <div className="hidden sm:flex gap-1">
             <button
               onClick={undo}
               disabled={!canUndo()}
@@ -180,18 +180,18 @@ export function App() {
             </button>
           </div>
 
-          <div className="w-px h-6 bg-surface-700" />
+          <div className="hidden sm:block w-px h-6 bg-surface-700" />
 
           {/* Presets */}
           <PresetLibrary />
 
-          <div className="w-px h-6 bg-surface-700" />
+          <div className="hidden sm:block w-px h-6 bg-surface-700" />
 
-          {/* Save/Load/Export */}
-          <div className="flex gap-2">
+          {/* Save/Load/Export - simplified on mobile */}
+          <div className="flex gap-1 sm:gap-2">
             <button
               onClick={() => setShowSaveModal(true)}
-              className="px-3 py-1.5 text-xs font-medium rounded bg-surface-800 text-surface-300 hover:bg-surface-700 hover:text-white transition-colors"
+              className="px-2 sm:px-3 py-1.5 text-xs font-medium rounded bg-surface-800 text-surface-300 hover:bg-surface-700 hover:text-white transition-colors"
             >
               Save
             </button>
@@ -200,34 +200,34 @@ export function App() {
                 refreshProjects();
                 setShowLoadModal(true);
               }}
-              className="px-3 py-1.5 text-xs font-medium rounded bg-surface-800 text-surface-300 hover:bg-surface-700 hover:text-white transition-colors"
+              className="px-2 sm:px-3 py-1.5 text-xs font-medium rounded bg-surface-800 text-surface-300 hover:bg-surface-700 hover:text-white transition-colors"
             >
               Load
             </button>
             <button
               onClick={handleExport}
-              className="px-3 py-1.5 text-xs font-medium rounded bg-surface-800 text-surface-300 hover:bg-surface-700 hover:text-white transition-colors"
+              className="hidden sm:block px-3 py-1.5 text-xs font-medium rounded bg-surface-800 text-surface-300 hover:bg-surface-700 hover:text-white transition-colors"
             >
               Export
             </button>
           </div>
 
-          <div className="w-px h-6 bg-surface-700" />
+          <div className="hidden sm:block w-px h-6 bg-surface-700" />
 
-          {/* Shortcuts help */}
+          {/* Shortcuts help - hidden on mobile */}
           <button
             onClick={() => setShowShortcuts(!showShortcuts)}
-            className="px-2 py-1 text-xs text-surface-400 hover:text-white transition-colors"
+            className="hidden sm:block px-2 py-1 text-xs text-surface-400 hover:text-white transition-colors"
             title="Keyboard shortcuts"
           >
             ?
           </button>
 
-          <div className="w-px h-6 bg-surface-700" />
+          <div className="hidden sm:block w-px h-6 bg-surface-700" />
 
           {/* Status indicator */}
-          <div className="flex items-center gap-2">
-            <span className="text-xs text-surface-400 font-mono uppercase tracking-wider">
+          <div className="flex items-center gap-1 sm:gap-2">
+            <span className="hidden sm:inline text-xs text-surface-400 font-mono uppercase tracking-wider">
               {isPlaying ? "Playing" : "Stopped"}
             </span>
             <div
@@ -255,14 +255,14 @@ export function App() {
       )}
 
       {/* Main sequencer */}
-      <main className="flex-1 overflow-auto p-6">
+      <main className="flex-1 overflow-auto p-2 sm:p-6">
         <Sequencer />
       </main>
 
       {/* Save Modal */}
       {showSaveModal && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-surface-900 border border-surface-700 rounded-lg p-6 w-96">
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-surface-900 border border-surface-700 rounded-lg p-4 sm:p-6 w-full max-w-96">
             <h2 className="text-lg font-medium text-white mb-4">Save Project</h2>
             <input
               type="text"
@@ -293,8 +293,8 @@ export function App() {
 
       {/* Load Modal */}
       {showLoadModal && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-surface-900 border border-surface-700 rounded-lg p-6 w-96 max-h-[80vh] overflow-auto">
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-surface-900 border border-surface-700 rounded-lg p-4 sm:p-6 w-full max-w-96 max-h-[80vh] overflow-auto">
             <h2 className="text-lg font-medium text-white mb-4">Load Project</h2>
             {projects.length === 0 ? (
               <p className="text-surface-400 text-sm">No saved projects</p>

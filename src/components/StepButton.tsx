@@ -49,10 +49,10 @@ export function StepButton({
       onClick={onClick}
       onContextMenu={handleContextMenu}
       className={`
-        relative w-10 h-10 sm:w-12 sm:h-12 rounded transition-all duration-75 cursor-pointer overflow-hidden
+        relative w-8 h-8 sm:w-12 sm:h-12 rounded transition-all duration-75 cursor-pointer overflow-hidden flex-shrink-0
         ${
           isActive
-            ? "ring-2 ring-accent ring-offset-1 ring-offset-surface-900"
+            ? "ring-2 ring-inset ring-accent"
             : ""
         }
         ${

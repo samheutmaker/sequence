@@ -63,8 +63,8 @@ export function EffectsPanel({ track }: EffectsPanelProps) {
   };
 
   return (
-    <div className="px-4 py-3 bg-surface-850 border-t border-surface-700 rounded-b-lg -mt-2">
-      <div className="grid grid-cols-4 gap-6">
+    <div className="px-2 sm:px-4 py-2 sm:py-3 bg-surface-850 border-t border-surface-700 rounded-b-lg -mt-2">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6">
         {/* Distortion */}
         <EffectSlider
           label="Distortion"

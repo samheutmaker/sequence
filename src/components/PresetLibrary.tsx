@@ -31,8 +31,8 @@ export function PresetLibrary() {
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
-          <div className="bg-surface-900 border border-surface-700 rounded-xl w-[600px] max-h-[80vh] overflow-hidden shadow-2xl">
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
+          <div className="bg-surface-900 border border-surface-700 rounded-xl w-full max-w-[600px] max-h-[80vh] overflow-hidden shadow-2xl">
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-surface-700">
               <div>
@@ -77,8 +77,8 @@ export function PresetLibrary() {
             </div>
 
             {/* Presets grid */}
-            <div className="p-4 overflow-y-auto max-h-[50vh]">
-              <div className="grid grid-cols-2 gap-3">
+            <div className="p-3 sm:p-4 overflow-y-auto max-h-[50vh]">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                 {filteredPresets.map((preset) => (
                   <button
                     key={preset.id}
