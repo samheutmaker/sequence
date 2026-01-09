@@ -7,11 +7,12 @@
     "dev": "bunx --bun vite",
     "build": "bunx --bun vite build",
     "preview": "bunx --bun vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "deploy": "flyctl deploy --now"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samheutmaker/beat-bot.git"
+    "url": "git+https://github.com/samheutmaker/sequence.git"
   },
   "author": "samheutmaker@gmail.com",
   "license": "MIT",
