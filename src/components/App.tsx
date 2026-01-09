@@ -70,7 +70,7 @@ export function App() {
           {/* Logo / Title */}
           <div className="mb-8">
             <h1 className="text-5xl font-bold text-white tracking-tight mb-3">
-              Sequence
+              Cowboy Beatbox
             </h1>
             <p className="text-surface-400 text-lg">
               Professional Drum Machine
@@ -148,7 +148,7 @@ export function App() {
       {/* Header */}
       <header className="flex items-center justify-between px-3 sm:px-6 py-2 sm:py-3 bg-surface-900 border-b border-surface-700">
         <h1 className="text-sm sm:text-base font-semibold text-white tracking-tight">
-          Sequence
+          Cowboy Beatbox
         </h1>
 
         <div className="flex items-center gap-2 sm:gap-4">
