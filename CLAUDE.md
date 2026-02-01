@@ -1,4 +1,4 @@
-# Sequence - Drum Machine
+# Cowboy Beatbox - Drum Machine
 
 A professional drum machine / beat sequencer built with React, TypeScript, and Web Audio API.
 

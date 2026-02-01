@@ -19,7 +19,7 @@ import {
 import { DRUM_KITS, getKitById, DEFAULT_KIT_ID } from "../data/kits";
 import { audioEngine } from "../audio/AudioEngine";
 import { Scheduler } from "../audio/Scheduler";
-import type { BeatPreset } from "../data/presets";
+import { type BeatPreset, getPresetById } from "../data/presets";
 
 // Generate unique IDs
 const generateId = () => Math.random().toString(36).substring(2, 9);
@@ -170,6 +170,31 @@ export const useSequencerStore = create<SequencerStore>((set, get) => ({
         getPatternLength: () => get().patternLength,
         hasSoloTrack: () => get().tracks.some((t) => t.solo),
       });
+
+      // Load default beat preset
+      const defaultPreset = getPresetById("default-beat");
+      if (defaultPreset) {
+        const state = get();
+        const newTracks = state.tracks.map((track, index) => {
+          const presetPattern = defaultPreset.pattern[index];
+          if (!presetPattern) return track;
+
+          const sequence = Array.from({ length: state.patternLength }, (_, i) => {
+            if (i < presetPattern.length) {
+              return { ...presetPattern[i] };
+            }
+            return { ...presetPattern[i % presetPattern.length] };
+          });
+
+          return { ...track, sequence };
+        });
+
+        set({
+          tracks: newTracks,
+          bpm: defaultPreset.bpm,
+          swing: defaultPreset.swing,
+        });
+      }
 
       // Initialize history
       saveToHistory({

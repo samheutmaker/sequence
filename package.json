@@ -1,5 +1,5 @@
 {
-  "name": "sequence",
+  "name": "cowboy-beatbox",
   "version": "3.0.0",
   "description": "Professional drum machine / beat sequencer with Web Audio API",
   "type": "module",

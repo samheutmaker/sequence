@@ -93,4 +93,4 @@ export const getKitById = (id: string): DrumKit | undefined =>
   DRUM_KITS.find((kit) => kit.id === id);
 
 // Default kit
-export const DEFAULT_KIT_ID = "808-classic";
+export const DEFAULT_KIT_ID = "lofi-tape";

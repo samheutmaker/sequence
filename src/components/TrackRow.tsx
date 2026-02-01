@@ -27,21 +27,21 @@ export function TrackRow({ track, currentStep }: TrackRowProps) {
   return (
     <div className="flex flex-col">
       <div
-        className={`flex items-center gap-3 py-3 px-4 bg-surface-900 border border-surface-800 ${
+        className={`flex items-center gap-1 sm:gap-3 py-2 sm:py-3 px-2 sm:px-4 bg-surface-900 border border-surface-800 ${
           showEffects ? "rounded-t-lg border-b-0" : "rounded-lg"
         }`}
       >
         {/* Track name */}
-        <div className="w-16 text-sm font-medium text-surface-300 truncate">
+        <div className="w-12 sm:w-16 text-xs sm:text-sm font-medium text-surface-300 truncate flex-shrink-0">
           {track.name}
         </div>
 
         {/* Mute/Solo buttons */}
-        <div className="flex gap-1.5">
+        <div className="flex gap-1 flex-shrink-0">
           <button
             onClick={() => toggleMute(track.id)}
             className={`
-              w-8 h-8 text-xs font-bold rounded transition-colors
+              w-6 h-6 sm:w-8 sm:h-8 text-xs font-bold rounded transition-colors
               ${
                 track.muted
                   ? "bg-red-500 text-white"
@@ -55,7 +55,7 @@ export function TrackRow({ track, currentStep }: TrackRowProps) {
           <button
             onClick={() => toggleSolo(track.id)}
             className={`
-              w-8 h-8 text-xs font-bold rounded transition-colors
+              w-6 h-6 sm:w-8 sm:h-8 text-xs font-bold rounded transition-colors
               ${
                 track.solo
                   ? "bg-yellow-500 text-black"
@@ -86,7 +86,7 @@ export function TrackRow({ track, currentStep }: TrackRowProps) {
         <button
           onClick={() => setShowEffects(!showEffects)}
           className={`
-            w-8 h-8 text-xs font-bold rounded transition-colors flex-shrink-0
+            w-6 h-6 sm:w-8 sm:h-8 text-xs font-bold rounded transition-colors flex-shrink-0
             ${
               showEffects
                 ? "bg-accent text-white"

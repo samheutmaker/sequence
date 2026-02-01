@@ -27,10 +27,10 @@ export function PatternManager() {
   const patternLengths: (8 | 16 | 32 | 64)[] = [8, 16, 32, 64];
 
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-2 sm:gap-4 flex-wrap">
       {/* Patterns */}
       <div className="flex items-center gap-2">
-        <span className="text-sm text-surface-400 font-medium">Patterns:</span>
+        <span className="text-xs sm:text-sm text-surface-400 font-medium">Patterns:</span>
         <div className="flex gap-1 relative">
           {patterns.map((pattern, index) => (
             <div key={pattern.id} className="relative">
@@ -38,7 +38,7 @@ export function PatternManager() {
                 onClick={() => switchPattern(pattern.id)}
                 onContextMenu={(e) => handleRightClick(e, pattern.id)}
                 className={`
-                  w-10 h-10 text-sm font-bold rounded transition-all
+                  w-8 h-8 sm:w-10 sm:h-10 text-xs sm:text-sm font-bold rounded transition-all
                   ${
                     currentPatternId === pattern.id
                       ? "bg-accent text-white"
@@ -81,7 +81,7 @@ export function PatternManager() {
           {/* Add pattern button */}
           <button
             onClick={() => createPattern()}
-            className="w-10 h-10 text-lg font-bold rounded bg-surface-800 text-surface-500 hover:bg-surface-700 hover:text-white transition-all"
+            className="w-8 h-8 sm:w-10 sm:h-10 text-lg font-bold rounded bg-surface-800 text-surface-500 hover:bg-surface-700 hover:text-white transition-all"
             title="Create new pattern"
           >
             +
@@ -91,14 +91,14 @@ export function PatternManager() {
 
       {/* Pattern length */}
       <div className="flex items-center gap-2">
-        <span className="text-sm text-surface-400 font-medium">Steps:</span>
+        <span className="text-xs sm:text-sm text-surface-400 font-medium">Steps:</span>
         <div className="flex gap-1">
           {patternLengths.map((len) => (
             <button
               key={len}
               onClick={() => setPatternLength(len)}
               className={`
-                px-2 py-1 text-xs font-mono rounded transition-all
+                px-1.5 sm:px-2 py-1 text-xs font-mono rounded transition-all
                 ${
                   patternLength === len
                     ? "bg-accent text-white"
